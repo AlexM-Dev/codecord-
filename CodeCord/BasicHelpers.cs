@@ -12,9 +12,17 @@ namespace CodeCord {
         }
         public static string RemoveSpaces(string str) {
             string output = str;
-            while (output.Contains("  ")) 
+            while (output.Contains("  "))
                 output = output.Replace("  ", " ");
             return output;
+        }
+        public static string RemoveTab(string str) {
+            return str.Replace("\t", "");
+        }
+        public static string Normalise(string str) {
+            return RemoveTab(
+                   RemoveSpaces(
+                   RemoveLines(str)));
         }
     }
 }
