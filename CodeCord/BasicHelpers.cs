@@ -10,5 +10,11 @@ namespace CodeCord {
         public static string RemoveLines(string str) {
             return Regex.Replace(str, "[\r\n(\r\n)]", "");
         }
+        public static string RemoveSpaces(string str) {
+            string output = str;
+            while (output.Contains("  ")) 
+                output = output.Replace("  ", " ");
+            return output;
+        }
     }
 }
