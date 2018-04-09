@@ -20,9 +20,11 @@ namespace CodeCord {
             return str.Replace("\t", "");
         }
         public static string Normalise(string str) {
-            return RemoveTab(
-                   RemoveSpaces(
-                   RemoveLines(str)));
+            string tab = RemoveTab(str);
+            string space = RemoveSpaces(tab);
+            string lines = RemoveLines(space);
+
+            return lines;
         }
     }
 }
