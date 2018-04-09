@@ -10,10 +10,9 @@ namespace CodeCord
     {
         private static void Main(string[] args)
         {
-            string lines = "Hello\r\n    Noob!";
+            string lines = "\tHello\r\n    Noob!";
             Console.WriteLine(lines);
-            Console.WriteLine(BasicHelpers.RemoveLines(lines));
-            Console.WriteLine(BasicHelpers.RemoveSpaces(lines));
+            Console.WriteLine(BasicHelpers.Normalise(lines));
             Console.ReadKey();
         }
     }
